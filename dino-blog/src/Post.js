@@ -2,6 +2,38 @@
 // import { Component } from "react"
 import React, {Component} from "react";
 
+class postTitle extends Component {
+    render() {
+        return(
+            <h1>{this.props.postTitle}</h1>
+        )  
+    }
+}
+
+class Author extends Component {
+    render() {
+        return(
+            <h4>{this.props.author}</h4>
+        )  
+    }
+}
+
+class Content extends Component {
+    render() {
+        return(
+            <h4>{this.props.content}</h4>
+        )  
+    }
+}
+
+class Comment extends Component {
+    render() {
+        return(
+            <h4>{this.props.comment}</h4>
+        )  
+    }
+}
+
 class Post extends Component {
     render() {
         const comments = this.props.comments.map((comment) =>
@@ -9,11 +41,23 @@ class Post extends Component {
         )
         return(
             <div class="dinostyle">
-                <h1>{this.props.postTitle}</h1>
-                <h4>by {this.props.author}</h4>
-                <h4>{this.props.content}</h4>
+                <postTitle postTitle={this.props.postTitle}/>
+                <Author author={this.props.author}/>
+                <Content content={this.props.content}/>
                 <h2>Comments:</h2>
                 <p>{comments}</p>
+            </div>
+        )  
+    }
+}
+
+class LockedPost extends Component {
+    render() {
+        return(
+            <div class="dinostyle">
+                <postTitle postTitle={this.props.postTitle}/>
+                <Author author={this.props.author}/>
+                <Content content={this.props.content}/>
             </div>
         )  
     }
