@@ -8,7 +8,7 @@ const Dinosaur ={
   postTitle: "Dinsosaurs are awesome",
   author: "Stealthy Stegosaurus",
   content: "Check out this body property!",
-  comments: "First!"
+  comments: ["First!", "I h8 dinos", "sup"]
 }
 
 ReactDOM.render(
